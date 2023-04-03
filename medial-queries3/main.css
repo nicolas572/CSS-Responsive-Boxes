@@ -1,3 +1,58 @@
 body {
   background: peachpuff;
 }
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.inner-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.a, .b, .c, .d, .e, .f, .g, .h {
+  background-color: #ff8c00;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.a {
+  flex: 1;
+}
+
+.h {
+  flex: 3;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .a {
+    flex-basis: 100%;
+  }
+  .inner-container {
+    flex: 3;
+  }
+  .h {
+    flex: 1;
+  }
+}
+
+
+
+
+
+
+
